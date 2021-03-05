@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8/>
+<title>JavaScript program to calculate arithmetic operation of two numbers</title>
+
+<style type="text/css">
+
+body
+{
+background-color: #CCCCFF;
+margin: 30px;
+}
+
+#result
+{
+display:block;
+border:solid thin black;
+padding: 5px
+}
+</style>
+
+<script type="text/javascript">
+var num1,num2;
+function getNum()
+{
+num1=document.getElementById("firstNumber").value;
+num2=document.getElementById("secondNumber").value;
+if(isNaN(num1)||isNaN(num2))
+document.getElementById("result").innerHTML="Enter valid Number";
+}
+function add()
+{
+getNum();
+document.getElementById("result").innerHTML=+num1 + +num2;
+}
+function multiply()
+{
+getNum();
+document.getElementById("result").innerHTML=num1 * num2;
+}
+function divide()
+{
+getNum();
+document.getElementById("result").innerHTML=num1/num2;
+}
+function quotient()
+{
+getNum();
+document.getElementById("result").innerHTML=Math.trunc(num1/num2);
+}
+</script>
+</head>
+<body>
+<h3>Simple Javasccript Calculator</h3>
+<form>
+<label>firstNumber</label>
+<input type="text" id="firstNumber">
+</br>
+<label>secondNumber</label>
+<input type="text" id="secondNumber">
+</br>
+<button type="button" onclick="add()">add</button>
+<button type="button" onclick="multiply()">mult</button>
+<button type="button" onclick="divide()">divide</button>
+<button type="button" onclick="quotient()">quotient</button>
+</form>
+<p>The Result is:</p>
+<span id="result"></span>
+</body>
+</html>
